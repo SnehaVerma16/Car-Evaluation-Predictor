@@ -1,0 +1,227 @@
+# 🚗 CarWise — Intelligent Car Evaluation System
+
+CarWise is a machine learning-powered web application designed to evaluate the overall acceptability of a vehicle based on its key characteristics.
+
+The application takes vehicle specifications such as buying price, maintenance cost, passenger capacity, luggage boot size, and safety level, processes them through a trained classification model, and provides an instant vehicle evaluation through a clean and responsive web interface.
+
+## 🌐 Live Application
+
+**Try CarWise:** https://car-evaluation-predictor.onrender.com
+
+---
+
+## 📌 Project Overview
+
+Choosing a vehicle involves evaluating multiple characteristics rather than relying on a single factor.
+
+CarWise demonstrates how a machine learning classification model can use multiple vehicle attributes to categorize a car into one of four evaluation classes:
+
+- **Unacceptable**
+- **Acceptable**
+- **Good**
+- **Very Good**
+
+The trained model is integrated with a Flask backend and deployed as an interactive web application.
+
+---
+
+## ✨ Features
+
+- Machine learning-based vehicle classification
+- Six vehicle characteristics used for evaluation
+- Four possible prediction categories
+- Simple dropdown-based input system
+- Instant prediction results
+- Responsive and user-friendly interface
+- Flask integration for model inference
+- Deployed online using Render
+
+---
+
+## 🧠 Machine Learning Model
+
+The application uses an **XGBoost classification model** trained to predict vehicle acceptability.
+
+The model evaluates six input features:
+
+| Feature | Description |
+|---|---|
+| Buying Price | Purchase price category of the vehicle |
+| Maintenance Cost | Expected maintenance cost |
+| Number of Doors | Number of doors in the vehicle |
+| Passenger Capacity | Number of passengers the vehicle can accommodate |
+| Luggage Boot Size | Available luggage space |
+| Safety Level | Safety category of the vehicle |
+
+The categorical inputs selected by the user are converted into the representation expected by the trained model before prediction.
+
+---
+
+## ⚙️ How It Works
+
+```text
+User enters vehicle specifications
+              ↓
+       Flask Web Application
+              ↓
+       Input Preprocessing
+              ↓
+     Trained XGBoost Model
+              ↓
+      Vehicle Classification
+              ↓
+     Result displayed to user
+```
+
+---
+
+## 🛠️ Tech Stack
+
+### Machine Learning
+- Python
+- XGBoost
+- Scikit-learn
+- NumPy
+- Joblib
+
+### Web Development
+- Flask
+- HTML5
+- CSS3
+
+### Deployment & Version Control
+- Git
+- GitHub
+- Gunicorn
+- Render
+
+---
+
+## 📂 Project Structure
+
+```text
+Car-Evaluation-Predictor/
+│
+├── app.py
+├── car_safety_model.pkl
+├── car_safety_model.json
+├── requirements.txt
+│
+├── templates/
+│   └── index.html
+│
+└── static/
+    └── style.css
+```
+
+### File Description
+
+- `app.py` — Flask application and prediction logic
+- `car_safety_model.pkl` — Serialized trained machine learning model
+- `car_safety_model.json` — XGBoost model representation
+- `templates/index.html` — Main application interface
+- `static/style.css` — Styling and responsive UI
+- `requirements.txt` — Python dependencies required for deployment
+
+---
+
+## 💻 Run Locally
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/SnehaVerma16/Car-Evaluation-Predictor.git
+```
+
+### 2. Navigate to the project directory
+
+```bash
+cd Car-Evaluation-Predictor
+```
+
+### 3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Run the application
+
+```bash
+python app.py
+```
+
+### 5. Open the application
+
+Open the local URL displayed in your terminal, typically:
+
+```text
+http://127.0.0.1:5000
+```
+
+---
+
+## 🚀 Deployment
+
+The application is deployed as a **Render Web Service**.
+
+Render installs the project dependencies using:
+
+```bash
+pip install -r requirements.txt
+```
+
+and runs the Flask application using Gunicorn:
+
+```bash
+gunicorn app:app
+```
+
+---
+
+## 📊 Prediction Output
+
+Depending on the selected vehicle specifications, CarWise predicts one of the following classes:
+
+| Prediction | Meaning |
+|---|---|
+| Unacceptable | Vehicle characteristics result in a low overall evaluation |
+| Acceptable | Vehicle meets basic acceptability criteria |
+| Good | Vehicle has comparatively favorable characteristics |
+| Very Good | Vehicle receives the highest evaluation category |
+
+---
+
+## 🎯 Project Objective
+
+The objective of this project is to demonstrate an end-to-end machine learning workflow—from a trained classification model to a usable deployed web application.
+
+The project covers:
+
+- Machine learning classification
+- Categorical feature handling
+- Model serialization
+- Flask backend development
+- Frontend integration
+- Git/GitHub version control
+- Cloud deployment
+
+---
+
+## ⚠️ Disclaimer
+
+CarWise is an educational machine learning project. Predictions generated by the application are based on the dataset and model used during development and should not be considered professional automotive or purchasing advice.
+
+---
+
+## 👩‍💻 Developer
+
+**Sneha Verma**
+
+B.Tech — Computer Science & Engineering
+
+GitHub : https://github.com/SnehaVerma16 • LinkedIn : https://www.linkedin.com/in/sneha-verma-071b04322/
+
+---
+
+If you found this project useful, consider giving the repository a ⭐.
