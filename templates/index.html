@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CarWise | Intelligent Car Evaluation</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="page-wrapper">
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <div class="brand">
+
+                <div class="logo">CW</div>
+
+                <div class="brand-text">
+                    <h2>CarWise</h2>
+                    <span>Intelligent Vehicle Evaluation</span>
+                </div>
+
+            </div>
+
+            <div class="nav-badge">
+                <span class="status-dot"></span>
+                ML Powered Evaluation
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <!-- LEFT SIDE -->
+
+            <div class="hero-left">
+
+                <span class="hero-tag">
+                    MACHINE LEARNING POWERED
+                </span>
+
+                <h1>
+                    Evaluate Your Car
+                    <span>Intelligently.</span>
+                </h1>
+
+                <p>
+                    Make smarter vehicle decisions using machine learning.
+                    Enter your car specifications and CarWise will evaluate
+                    its overall acceptability within seconds.
+                </p>
+
+                <a href="#evaluation" class="hero-button">
+                    Start Evaluation
+                </a>
+
+            </div>
+
+
+            <!-- RIGHT SIDE -->
+
+            <div class="hero-right">
+
+                <div class="visual-card">
+
+                    <div class="visual-icon">
+                        CW
+                    </div>
+
+                    <h3>Smart Vehicle Analysis</h3>
+
+                    <p class="visual-description">
+                        Cost • Capacity • Space • Safety
+                    </p>
+
+
+                    <!-- STATS -->
+
+                    <div class="visual-stats">
+
+                        <div>
+                            <strong>6</strong>
+                            <span>Features</span>
+                        </div>
+
+                        <div>
+                            <strong>4</strong>
+                            <span>Categories</span>
+                        </div>
+
+                        <div>
+                            <strong>ML</strong>
+                            <span>Powered</span>
+                        </div>
+
+                    </div>
+
+
+                    <!-- DEVELOPER INFO -->
+
+                    <div class="hero-developer">
+
+                        <span class="developed-label">
+                            DESIGNED &amp; DEVELOPED BY
+                        </span>
+
+                        <h4>Sneha Verma</h4>
+
+                        <span class="student-id">
+                            28240091
+                        </span>
+
+
+                        <!-- SOCIAL ICONS -->
+
+                        <div class="social-links">
+
+                            <!-- GITHUB -->
+
+                            <a href="https://github.com/SnehaVerma16"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               aria-label="GitHub"
+                               title="GitHub">
+
+                                <svg viewBox="0 0 24 24">
+
+                                    <path fill="currentColor"
+                                          d="M12 .7C5.7.7.6 5.8.6 12.1c0 5 3.3 9.2 7.8 10.7.6.1.8-.3.8-.6v-2.2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 015.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.1v3.1c0 .4.2.7.8.6a11.5 11.5 0 007.8-10.7C23.4 5.8 18.3.7 12 .7z"/>
+
+                                </svg>
+
+                            </a>
+
+
+                            <!-- LINKEDIN -->
+
+                            <a href="https://www.linkedin.com/in/sneha-verma-071b04322/"
+                                target="_blank"
+                                rel="noopener"
+                                aria-label="LinkedIn"
+                                title="LinkedIn">
+
+                                <svg viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                        d="M20.5 3H3.5A2.5 2.5 0 001 5.5v13A2.5 2.5 0 003.5 21h17a2.5 2.5 0 002.5-2.5v-13A2.5 2.5 0 0020.5 3zM8 18H5V9h3v9zM6.5 7.7A1.75 1.75 0 116.5 4.2a1.75 1.75 0 010 3.5zM19 18h-3v-4.4c0-1.1 0-2.5-1.5-2.5S13 12.3 13 13.5V18h-3V9h2.9v1.2h.1a3.2 3.2 0 012.8-1.5c3 0 3.5 2 3.5 4.5V18z"/>
+                                </svg>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+        <!-- EVALUATION INTRO -->
+
+        <section class="section-intro"
+                 id="evaluation">
+
+            <span class="small-heading">
+                VEHICLE EVALUATION
+            </span>
+
+            <h2>Tell us about the vehicle</h2>
+
+            <p>
+                Select the specifications below to generate
+                an ML-powered evaluation.
+            </p>
+
+        </section>
+
+
+        <!-- ================= FORM CARD ================= -->
+
+        <section class="evaluation-card">
+
+            <div class="card-heading">
+
+                <div class="heading-number">
+                    01
+                </div>
+
+                <div>
+                    <h2>Vehicle Details</h2>
+
+                    <p>
+                        Complete all fields before evaluating
+                        the vehicle.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <form action="/predict"
+                  method="POST">
+
+
+                <!-- ========== PURCHASE ========== -->
+
+                <div class="form-section">
+
+                    <div class="section-title">
+
+                        <span class="section-number">
+                            01
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                Purchase &amp; Maintenance
+                            </h3>
+
+                            <p>
+                                Tell us about the vehicle's
+                                ownership cost.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-grid">
+
+
+                        <!-- BUYING -->
+
+                        <div class="input-group">
+
+                            <label for="buying">
+                                Buying Price
+                            </label>
+
+                            <select id="buying"
+                                    name="buying"
+                                    required>
+
+                                <option value=""
+                                        disabled
+                                        {% if not selected %}selected{% endif %}>
+                                    Select buying price
+                                </option>
+
+                                <option value="low"
+                                        {% if selected and selected.buying == 'low' %}selected{% endif %}>
+                                    Low
+                                </option>
+
+                                <option value="med"
+                                        {% if selected and selected.buying == 'med' %}selected{% endif %}>
+                                    Medium
+                                </option>
+
+                                <option value="high"
+                                        {% if selected and selected.buying == 'high' %}selected{% endif %}>
+                                    High
+                                </option>
+
+                                <option value="vhigh"
+                                        {% if selected and selected.buying == 'vhigh' %}selected{% endif %}>
+                                    Very High
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- MAINTENANCE -->
+
+                        <div class="input-group">
+
+                            <label for="maintenance">
+                                Maintenance Cost
+                            </label>
+
+                            <select id="maintenance"
+                                    name="maintenance"
+                                    required>
+
+                                <option value=""
+                                        disabled
+                                        {% if not selected %}selected{% endif %}>
+                                    Select maintenance cost
+                                </option>
+
+                                <option value="low"
+                                        {% if selected and selected.maintenance == 'low' %}selected{% endif %}>
+                                    Low
+                                </option>
+
+                                <option value="med"
+                                        {% if selected and selected.maintenance == 'med' %}selected{% endif %}>
+                                    Medium
+                                </option>
+
+                                <option value="high"
+                                        {% if selected and selected.maintenance == 'high' %}selected{% endif %}>
+                                    High
+                                </option>
+
+                                <option value="vhigh"
+                                        {% if selected and selected.maintenance == 'vhigh' %}selected{% endif %}>
+                                    Very High
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ========== CAPACITY ========== -->
+
+                <div class="form-section">
+
+                    <div class="section-title">
+
+                        <span class="section-number">
+                            02
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                Vehicle Capacity
+                            </h3>
+
+                            <p>
+                                Specify the size and passenger
+                                capacity.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-grid">
+
+
+                        <!-- DOORS -->
+
+                        <div class="input-group">
+
+                            <label for="doors">
+                                Number of Doors
+                            </label>
+
+                            <select id="doors"
+                                    name="doors"
+                                    required>
+
+                                <option value=""
+                                        disabled
+                                        {% if not selected %}selected{% endif %}>
+                                    Select number of doors
+                                </option>
+
+                                <option value="2"
+                                        {% if selected and selected.doors == '2' %}selected{% endif %}>
+                                    2 Doors
+                                </option>
+
+                                <option value="3"
+                                        {% if selected and selected.doors == '3' %}selected{% endif %}>
+                                    3 Doors
+                                </option>
+
+                                <option value="4"
+                                        {% if selected and selected.doors == '4' %}selected{% endif %}>
+                                    4 Doors
+                                </option>
+
+                                <option value="5more"
+                                        {% if selected and selected.doors == '5more' %}selected{% endif %}>
+                                    5 or More
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- PERSONS -->
+
+                        <div class="input-group">
+
+                            <label for="persons">
+                                Passenger Capacity
+                            </label>
+
+                            <select id="persons"
+                                    name="persons"
+                                    required>
+
+                                <option value=""
+                                        disabled
+                                        {% if not selected %}selected{% endif %}>
+                                    Select passenger capacity
+                                </option>
+
+                                <option value="2"
+                                        {% if selected and selected.persons == '2' %}selected{% endif %}>
+                                    2 Persons
+                                </option>
+
+                                <option value="4"
+                                        {% if selected and selected.persons == '4' %}selected{% endif %}>
+                                    4 Persons
+                                </option>
+
+                                <option value="more"
+                                        {% if selected and selected.persons == 'more' %}selected{% endif %}>
+                                    More than 4
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ========== SAFETY ========== -->
+
+                <div class="form-section">
+
+                    <div class="section-title">
+
+                        <span class="section-number">
+                            03
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                Space &amp; Safety
+                            </h3>
+
+                            <p>
+                                Evaluate practicality and
+                                safety level.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-grid">
+
+
+                        <!-- LUGGAGE -->
+
+                        <div class="input-group">
+
+                            <label for="luggage">
+                                Luggage Boot Size
+                            </label>
+
+                            <select id="luggage"
+                                    name="luggage"
+                                    required>
+
+                                <option value=""
+                                        disabled
+                                        {% if not selected %}selected{% endif %}>
+                                    Select luggage size
+                                </option>
+
+                                <option value="small"
+                                        {% if selected and selected.luggage == 'small' %}selected{% endif %}>
+                                    Small
+                                </option>
+
+                                <option value="med"
+                                        {% if selected and selected.luggage == 'med' %}selected{% endif %}>
+                                    Medium
+                                </option>
+
+                                <option value="big"
+                                        {% if selected and selected.luggage == 'big' %}selected{% endif %}>
+                                    Big
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- SAFETY -->
+
+                        <div class="input-group">
+
+                            <label for="safety">
+                                Safety Level
+                            </label>
+
+                            <select id="safety"
+                                    name="safety"
+                                    required>
+
+                                <option value=""
+                                        disabled
+                                        {% if not selected %}selected{% endif %}>
+                                    Select safety level
+                                </option>
+
+                                <option value="low"
+                                        {% if selected and selected.safety == 'low' %}selected{% endif %}>
+                                    Low
+                                </option>
+
+                                <option value="med"
+                                        {% if selected and selected.safety == 'med' %}selected{% endif %}>
+                                    Medium
+                                </option>
+
+                                <option value="high"
+                                        {% if selected and selected.safety == 'high' %}selected{% endif %}>
+                                    High
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BUTTON -->
+
+                <button type="submit"
+                        class="evaluate-btn">
+
+                    <span>
+                        Evaluate Vehicle
+                    </span>
+
+                    <span class="button-arrow">
+                        →
+                    </span>
+
+                </button>
+
+            </form>
+
+
+            <!-- ================= RESULT ================= -->
+
+            {% if prediction %}
+
+            <div class="result-card {{ result_class }}">
+
+                <span class="result-label">
+                    ML EVALUATION RESULT
+                </span>
+
+                <h2>
+                    {{ prediction }}
+                </h2>
+
+                <p>
+                    {{ result_message }}
+                </p>
+
+                <a href="/"
+                   class="reset-btn">
+
+                    Evaluate Another Vehicle
+
+                </a>
+
+            </div>
+
+            {% endif %}
+
+        </section>
+
+
+        <!-- ================= HOW IT WORKS ================= -->
+
+        <section class="how-it-works">
+
+            <div class="how-heading">
+
+                <span class="small-heading">
+                    BEHIND THE PREDICTION
+                </span>
+
+                <h2>
+                    How does CarWise work?
+                </h2>
+
+                <p>
+                    Vehicle characteristics are processed by our
+                    machine learning classification model to determine
+                    the vehicle's evaluation category.
+                </p>
+
+            </div>
+
+
+            <div class="steps-grid">
+
+
+                <div class="step-card">
+
+                    <span class="step-number">
+                        01
+                    </span>
+
+                    <h3>
+                        Enter Details
+                    </h3>
+
+                    <p>
+                        Select the vehicle's cost, capacity,
+                        luggage and safety characteristics.
+                    </p>
+
+                </div>
+
+
+                <div class="step-card">
+
+                    <span class="step-number">
+                        02
+                    </span>
+
+                    <h3>
+                        ML Analysis
+                    </h3>
+
+                    <p>
+                        The trained classification model analyses
+                        the selected vehicle characteristics.
+                    </p>
+
+                </div>
+
+
+                <div class="step-card">
+
+                    <span class="step-number">
+                        03
+                    </span>
+
+                    <h3>
+                        Get Evaluation
+                    </h3>
+
+                    <p>
+                        Receive one of four vehicle evaluation
+                        categories based on the model prediction.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <p class="disclaimer">
+
+                CarWise is an educational machine learning project.
+                Predictions should not be considered professional
+                automotive or purchasing advice.
+
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <p>
+            CarWise • Machine Learning Car Evaluation System
+        </p>
+
+    </footer>
+
+</div>
+
+</body>
+
+</html>
